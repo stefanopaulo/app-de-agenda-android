@@ -1,6 +1,10 @@
 package com.app.agenda.model;
 
-public class Aluno {
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
+
+public class Aluno implements Serializable {
     private final String nome;
     private final String telefone;
     private final String email;
@@ -11,6 +15,19 @@ public class Aluno {
         this.email = email;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    @NonNull
     @Override
     public String toString() {
         return nome;

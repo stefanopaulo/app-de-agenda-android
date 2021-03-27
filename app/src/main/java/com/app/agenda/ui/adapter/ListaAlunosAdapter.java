@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.app.agenda.R;
 import com.app.agenda.model.Aluno;
@@ -40,6 +41,11 @@ public class ListaAlunosAdapter extends BaseAdapter {
         View viewCriada = LayoutInflater
                 .from(context)
                 .inflate(R.layout.item_aluno, viewGroup, false);
+        Aluno alunoDevolvido = alunos.get(position);
+        TextView nome = viewCriada.findViewById(R.id.item_aluno_nome);
+        nome.setText(alunoDevolvido.getNome());
+        TextView telefone = viewCriada.findViewById(R.id.item_aluno_telefone);
+        telefone.setText(alunoDevolvido.getTelefone());
         return viewCriada;
     }
 

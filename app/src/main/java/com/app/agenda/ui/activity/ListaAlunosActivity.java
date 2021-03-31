@@ -21,7 +21,7 @@ import static com.app.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
 public class ListaAlunosActivity extends AppCompatActivity {
 
     public static final String TITULO_APPBAR = "Lista de alunos";
-    private final ListaAlunosView listaAlunosView = new ListaAlunosView();
+    private final ListaAlunosView listaAlunosView = new ListaAlunosView(this);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
